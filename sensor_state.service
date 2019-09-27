@@ -1,0 +1,13 @@
+[Unit]
+Description=Sensor state
+
+[Service]
+Type=simple
+OOMScoreAdjust=-1000
+Restart=always
+ExecStart=/opt/zsensor/bin/sensor_state.py
+TimeoutStartSec=60
+RestartSec=3600
+
+[Install]
+WantedBy=multi-user.target
